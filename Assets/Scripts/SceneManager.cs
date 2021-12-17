@@ -7,6 +7,6 @@ public class SceneManager : MonoBehaviour
 {
     public void SceneSwitch(string sceneName)
     {
-        //SceneManager.LoadScene(sceneName);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 }
