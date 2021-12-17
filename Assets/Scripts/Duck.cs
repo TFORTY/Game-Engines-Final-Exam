@@ -27,6 +27,7 @@ public class Duck : MonoBehaviour
 
     private void OnMouseDown()
     {
+        ScoreText.Instance.AddScore(1);
         Destroy(gameObject);
     }
 }
