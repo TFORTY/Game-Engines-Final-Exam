@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Duck : MonoBehaviour
 {
+    public static event Action shoot;
+
     public float moveSpeed = 5f;
     Rigidbody2D rb;
     Vector2 screenBounds;
@@ -28,6 +31,9 @@ public class Duck : MonoBehaviour
     private void OnMouseDown()
     {
         ScoreText.Instance.AddScore(1);
+
+        shoot?.Invoke();
+
         Destroy(gameObject);
     }
 }
