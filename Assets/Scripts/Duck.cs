@@ -21,11 +21,13 @@ public class Duck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (transform.position.x < screenBounds.x)
+        if (transform.position.x < screenBounds.x)
         {
             //Destroy(gameObject);
-            //ObjectPool.Instance.AddToPool(gameObject);
-        }*/
+            ObjectPool.Instance.AddToPool(gameObject);
+        }
+
+       
     }
 
     private void OnMouseDown()
